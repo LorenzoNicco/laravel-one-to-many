@@ -11,6 +11,8 @@
     
                 <h6>{{ $project->slug }}</h6>
 
+                <h3>Tipologia di progetto: {{ $project->type ? $project->type->title : 'Non specificato.' }}</h3>
+
                 @if ($project->img)
                     <img src="{{ asset('storage/'.$project->img) }}" class="card-img-top" alt="immagine" style="height: 200px; width: 300px">
                 @endif
