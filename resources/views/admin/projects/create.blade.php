@@ -19,12 +19,6 @@
         </div>
 
         <div class="mb-3">
-            <p class="text-light">
-                I campi contrassegnati con <span class="text-danger">*</span> sono obbligatori
-            </p>
-        </div>
-
-        <div class="mb-3">
             <label class="text-light" for="type_id">Scegli una tipologia di progetto</label>
             <select name="type_id" id="type_id">
                 <option value="">Non definito</option>
@@ -37,6 +31,12 @@
         <div class="mb-3">
             <label for="image-input" class="form-label">Immagine</label>
             <input class="form-control" type="file" id="image-input" name="img" accept="image/*">
+        </div>
+
+        <div class="mb-3">
+            <p class="text-light">
+                I campi contrassegnati con <span class="text-danger">*</span> sono obbligatori
+            </p>
         </div>
 
         <input type="submit" class="btn btn-primary">
