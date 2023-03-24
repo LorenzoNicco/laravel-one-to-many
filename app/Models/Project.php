@@ -15,4 +15,8 @@ class Project extends Model
         'description',
         'img'
     ];
+
+    public function types() {
+        return $this->hasMany(Type::class);
+    }
 }

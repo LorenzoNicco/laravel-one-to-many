@@ -13,4 +13,8 @@ class Type extends Model
         'title',
         'slug'
     ];
+
+    public function project() {
+        return $this->belongsTo(Project::class);
+    }
 }
