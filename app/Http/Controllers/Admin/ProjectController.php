@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 // utilities
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Type;
 
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
@@ -35,7 +36,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = Type::class;
+
+        return view('admin.projects.create', compact('types'));
     }
 
     /**

@@ -18,10 +18,20 @@
             <textarea required class="form-control" id="description-input" name="description" rows="3"></textarea>
         </div>
 
-        <div>
+        <div class="mb-3">
             <p class="text-light">
                 I campi contrassegnati con <span class="text-danger">*</span> sono obbligatori
             </p>
+        </div>
+
+        <div class="mb-3">
+            <label class="text-light" for="type_id">Scegli una tipologia di progetto</label>
+            <select name="type_id" id="type_id">
+                <option value="">Non definito</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->title }}</option>
+                @endforeach
+            </select>
         </div>
 
         <div class="mb-3">

@@ -7,14 +7,14 @@
 
         <div class="card">
             <div class="col-md-8">
-                <h1>{{ $project->title }}</h1>
+                <h1 class="mb-3">{{ $project->title }}</h1>
     
-                <h6>{{ $project->slug }}</h6>
+                <h6 class="mb-3">{{ $project->slug }}</h6>
 
-                <h3>Tipologia di progetto: {{ $project->type ? $project->type->title : 'Non specificato.' }}</h3>
+                <h3 class="mb-3">Tipologia di progetto: {{ $project->type ? $project->type->title : 'Non specificato.' }}</h3>
 
                 @if ($project->img)
-                    <img src="{{ asset('storage/'.$project->img) }}" class="card-img-top" alt="immagine" style="height: 200px; width: 300px">
+                    <img src="{{ asset('storage/'.$project->img) }}" class="card-img-top mb-3" alt="immagine" style="height: 200px; width: 300px">
                 @endif
     
                 <p>{{ $project->description }}</p>
