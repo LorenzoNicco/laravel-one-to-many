@@ -20,6 +20,16 @@
         </div>
 
         <div class="mb-3">
+            <label class="text-light" for="type_id">Scegli una tipologia di progetto</label>
+            <select name="type_id" id="type_id">
+                <option value="">Non definito</option>
+                @foreach ($types as $type)
+                    <option value="{{ $type->id }}" {{ old('type_id', $project->type_id == $type->id ? 'selected' : '') }}>{{ $type->title }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
             <label for="image-input" class="form-label text-light">Immagine</label>
 
             @if ($project->img)
