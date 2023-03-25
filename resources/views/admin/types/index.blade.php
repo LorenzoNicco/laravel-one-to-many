@@ -13,7 +13,10 @@
         <ul>
             @foreach ($types as $type)
                 <li class="text-light mb-2">
-                    {{ $type->title }}
+                    <span>Titolo: <strong>{{ $type->title }}</strong></span> - 
+
+                    <span>Progetti associati: {{ $type->projects()->count() }}</span>
+                    <a href="{{ route('admin.types.show', $type->id) }}" class="btn btn-primary mb-2">Dettagli</a>
                     <a href="{{ route('admin.types.edit', $type->id) }}" class="btn btn-warning mb-2">Modifica</a>
                     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal_{{ $type->id }}">Elimina</button>
 
