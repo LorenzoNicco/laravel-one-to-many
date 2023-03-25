@@ -26,6 +26,9 @@
                                 <p class="card-text">{{ $project->description }}</p>
                             </li>
                             <li class="list-group-item">
+                                <p class="card-text">Tipo di progetto: {{ $project->type ? $project->type->title : 'non specificato' }}</p>
+                            </li>
+                            <li class="list-group-item">
                                 {{ $project->id }}
                             </li>
                             <li class="list-group-item">

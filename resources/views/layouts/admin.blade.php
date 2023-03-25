@@ -44,6 +44,16 @@
                             <i class="fa-solid fa-plus"></i> New Project
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary' : '' }}" href="{{route('admin.types.index')}}">
+                            <i class="fa-solid fa-list-ul"></i> Types
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.create' ? 'bg-secondary' : '' }}" href="{{route('admin.types.create')}}">
+                            <i class="fa-solid fa-plus"></i> New Type
+                        </a>
+                    </li>
                 </ul>
                 <div class="navbar-nav">
                     <div class="nav-item text-nowrap ms-2">
